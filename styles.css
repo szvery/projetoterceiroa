@@ -1,0 +1,82 @@
+/* CSS */
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+ 
+
+#logo {
+    font-family: 'Stretch Pro', st;
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.main-content {
+    margin: 20px;
+    padding-bottom: 40px; /* Espaço para o conteúdo abaixo */
+}
+
+#agendar, #conectar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00b2f8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    transition: all 0.3s;
+}
+
+#agendar:hover, #conectar:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+}
+
+#main-image {
+    width: 100%; /* 100% de largura */
+    max-width: 600px; /* Tamanho máximo */
+    margin: 20px auto; /* Centraliza a imagem */
+    display: block; /* Garante que a imagem se comporte como um bloco */
+}
+
+.info-section {
+    margin: 40px 0;
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 0 20px;
+}
+
+#scrollToTop {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}

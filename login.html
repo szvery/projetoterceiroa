@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Eduspace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff, #b6ffbb);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        p {
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .input-field:focus {
+            border-color: #007BFF;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+        .forgot-password {
+            display: block;
+            margin-top: 15px;
+            color: #888;
+            text-decoration: none;
+        }
+        .forgot-password:hover {
+            color: #007BFF;
+        }
+        .back-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: transparent;
+            color: #007BFF;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it a block element */
+        }
+        .back-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.3);
+            filter: blur(5px);
+            z-index: 0;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .back-btn:hover::before {
+            opacity: 1;
+        }
+        .back-btn:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="logo.png" alt="Eduspace">
+        <h2>Entrar com e-mail</h2>
+        <p>Simples, rápido e prático.</p>
+        <input type="email" class="input-field" placeholder="Email" required>
+        <input type="password" class="input-field" placeholder="Senha" required>
+        <button class="login-btn">Entrar</button>
+        <a href="inicial.html" class="back-btn">Voltar</a>
+        <a href="redefinir.html" class="forgot-password">Esqueci minha senha</a>
+    </div>
+
+</body>
+</html>
