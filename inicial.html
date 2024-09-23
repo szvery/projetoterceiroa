@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Stretch+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Eduspace</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            margin-bottom: 220px;
+            gap: 200px;
+        }
+        #logo {
+            font-family: 'Stretch Pro', sans-serif; 
+            font-size: 32px;
+            margin-right: 20px;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            margin: 0 40px;
+            position: relative;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+        }
+        nav .dropdown {
+            display: none;
+            position: absolute;
+            background: rgb(255, 255, 255);
+            border: 3px solid #ccc;
+            padding: 1;
+            z-index: 50;
+            width: 200px;
+            box-shadow: 0 0 30px rgba(0, 225, 255, 0.2);
+        }
+        nav li:hover .dropdown,
+        .dropdown:hover {
+            display: block;
+        }
+        .main-content {
+            margin: 10px;
+            text-align: center;
+        }
+        #agendar, #conectar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #04a2eb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+            transition: all 0.3s;
+        }
+        #agendar:hover, #conectar:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+        }
+        #main-image {
+            width: 100%;
+            max-width: 1300px;
+            margin: 30px auto;
+            display: block;
+        }
+        .image-size-control {
+            width: 80%;
+            max-width: 900px;
+            height: auto;
+        }
+        .separator-line {
+            width: 80%;
+            height: 3px;
+            background-color: #ccc;
+            margin: 50px auto; /* Ajusta a margem entre a imagem e a linha */
+        }
+        .info-section {
+            margin-top: 40px;
+            text-align: justify;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">Eduspace</div>
+            <ul>
+                <li>
+                    <a href="#" id="politicas">Políticas e Termos</a>
+                    <div class="dropdown" id="dropdown-politicas">
+                        <a href="politicas.html">Clique aqui para ser direcionado aos termos e serviços</a>
+                    </div>
+                </li>
+                <li><a href="#recursos-info">Recursos</a></li>
+                <li><a href="#contato-info">Contato</a></li>
+                <li><a href="#sobre-nos-info">Sobre Nós</a></li>
+            </ul>
+            <button id="conectar" onclick="window.location.href='login.html'">Conecte-se</button>
+        </nav>
+    </header>
+    
+    <section class="main-content">
+        <h1>Simples, rápido e prático.</h1>
+        <p>Simplificamos seu agendamento, maximizamos seu ensino.</p>
+        <button id="agendar" onclick="window.location.href='login.html'">Quero agendar agora!</button>
+        <img src="note.png" alt="Imagem principal" class="main-image image-size-control" id="main-image">
+    </section>
+
+    <div class="separator-line"></div> <!-- Linha de separação -->
+    
+    <section class="info-section" id="recursos-info">
+        <h2>Recursos</h2>
+        <p> Agendamento Intuitivo: Reserve salas em poucos cliques, escolhendo data, horário e recursos adicionais.
+        <p> Calendário Compartilhado: Visualize a agenda de todas as salas em um único lugar, evitando conflitos de horários.
+        <p> Notificações Personalizadas: Receba lembretes por email ou notificações push sobre seus agendamentos e eventos importantes.
+        <p> Relatórios Detalhados: Gere relatórios personalizados para acompanhar o uso das salas e identificar tendências.</p>
+    </section>
+    
+    <section class="info-section" id="contato-info">
+        <h2>Contato</h2>
+        <p>Para mais informações ou suporte, entre em contato conosco:
+            <p>
+            <br>
+             Email: cauasilva251@aluno.enova.educacao.ba.gov.br
+             <br>
+             Telefone: 71 98621-5422</p>
+    </section>
+    
+    <section class="info-section" id="sobre-nos-info">
+        <h2>Sobre Nós</h2>
+        <p>O Eduspace é uma plataforma digital criada pelo 3°am tec com o objetivo de simplificar e agilizar o processo de agendamento de salas no CEAAT. Com o Eduspace, você pode reservar salas de forma rápida e fácil, visualizar a disponibilidade de cada ambiente e receber notificações sobre seus agendamentos.</p>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const politicas = document.getElementById('politicas');
+            const dropdownPoliticas = document.getElementById('dropdown-politicas');
+
+            politicas.addEventListener('mouseenter', () => dropdownPoliticas.style.display = 'block');
+            politicas.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    if (!dropdownPoliticas.matches(':hover')) {
+                        dropdownPoliticas.style.display = 'none';
+                    }
+                }, 200);
+            });
+            dropdownPoliticas.addEventListener('mouseleave', () => {
+                dropdownPoliticas.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
